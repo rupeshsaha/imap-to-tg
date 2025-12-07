@@ -1,0 +1,21 @@
+{
+  "name": "imap-to-tg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "imap": "^0.8.19",
+    "lowdb": "^7.0.1",
+    "mailparser": "^3.9.0",
+    "node-fetch": "^3.3.2",
+    "p-retry": "^7.1.0"
+  }
+}
