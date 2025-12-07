@@ -158,7 +158,7 @@ async function fetchAndProcess() {
 
       const latest10 = results.slice(0, 50);
 
-      const f = imap.fetch(latest10, { bodies: "", markSeen: true });
+      const f = imap.fetch(latest10, { bodies: "", markSeen: false });
 
       f.on("message", (msg, seqno) => {
         let uid;
