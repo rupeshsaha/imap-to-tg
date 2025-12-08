@@ -117,6 +117,12 @@ function safeOpenBox(boxName = MAILBOX) {
   });
 }
 
+
+
+/* fetch & process unseen UIDs */
+async function fetchAndProcess() {
+  return new Promise((resolve) => {
+
 function imapDate(days = 30) {
   const d = new Date();
   d.setDate(d.getDate() - days);
@@ -144,9 +150,9 @@ function imapDate(days = 30) {
 // Use in IMAP search
 const sinceDate = imapDate(30);
 
-/* fetch & process unseen UIDs */
-async function fetchAndProcess() {
-  return new Promise((resolve) => {
+
+
+
     imap.search(["UNSEEN", ["SINCE", sinceDate]], (err, results) => {
       if (err) {
         console.error("IMAP search error:", err);
